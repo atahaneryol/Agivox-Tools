@@ -34,9 +34,9 @@ public class Runner {
 		ArrayList<String> channelIDList = new ArrayList<String>();
         channelIDList.add("00000000000000902073");  //To do: add method that appends zeros.
         channelIDList.add("00004733798597001216");
-        channelIDList.add("000047337t8597001216");
+        //channelIDList.add("000047337t8597001216");
         
-        String urlString = "http://54.236.95.163:5984/agivox_rsslinks/" + channelIDList.get(2);
+        String urlString = "http://54.236.95.163:5984/agivox_rsslinks/" + channelIDList.get(1);
         URL temUr = new URL(urlString);
         Channel ch1 = new Channel();
         try
@@ -58,6 +58,8 @@ public class Runner {
 		System.out.println(ch1.get_id());
 		System.out.println(ch1.getTempo());
 		System.out.println(ch1.getHomelink());
+		
+		System.out.println("Ata Test for github");
 		
         Map<String,Object> docMap = mapper.convertValue(ch1,Map.class);
         System.out.println(docMap);
